@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #101828;
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.input,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+input[type="tel"] {
+  width: 100%;
+  border: solid 1px #d0d5dd;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 100%;
+  background-color: white;
+  color: #9ca3af;
+}
+#content-wrapper {
+  height: calc(100vh - 10px);
+}
