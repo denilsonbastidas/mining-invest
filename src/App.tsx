@@ -2,7 +2,6 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./routes/Home";
 import NotFound from "./routes/NotFound";
 import Quantify from "./routes/Quantify";
-import Team from "./routes/Team";
 import Profile from "./routes/Profile";
 import SignIn from "./routes/SignIn";
 import SignUp from "./routes/SignUp";
@@ -31,10 +30,10 @@ function App() {
         path="/quantify"
         element={isAuthenticated ? <Quantify /> : <Navigate to="/signin" />}
       />
-      <Route
+      {/* <Route
         path="/team"
         element={isAuthenticated ? <Team /> : <Navigate to="/signin" />}
-      />
+      /> */}
       <Route
         path="/profile"
         element={isAuthenticated ? <Profile /> : <Navigate to="/signin" />}

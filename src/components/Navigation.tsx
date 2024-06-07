@@ -2,7 +2,7 @@
 
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
-import { FaChartBar, FaHome, FaUser, FaUsers } from "react-icons/fa";
+import { FaChartBar, FaHome, FaUser } from "react-icons/fa";
 
 interface Props {
   mobile?: boolean;
@@ -12,10 +12,10 @@ function Navigation({ mobile }: Props) {
   const pathname = window.location.pathname;
 
   const quantifyRouter = pathname?.includes("quantify");
-  const teamRouter = pathname?.includes("team");
+  // const teamRouter = pathname?.includes("team");
   const profileRouter = pathname?.includes("profile");
 
-  const homeRouter = !quantifyRouter && !teamRouter && !profileRouter;
+  const homeRouter = !quantifyRouter && !profileRouter;
 
   if (mobile ?? false) {
     return (
@@ -38,14 +38,14 @@ function Navigation({ mobile }: Props) {
           </button>
         </Link>
 
-        <Link to="/team">
+        {/* <Link to="/team">
           <button
             type="button"
             className="flex flex-1 justify-center border-none"
           >
             <FaUsers size={18} color={teamRouter ? "#fff" : "#98A2B3"} />
           </button>
-        </Link>
+        </Link> */}
 
         <Link to="/profile">
           <button
@@ -83,7 +83,7 @@ function Navigation({ mobile }: Props) {
           </span>
         </Link>
 
-        <Link to="/team" className="flex items-center gap-2 ">
+        {/* <Link to="/team" className="flex items-center gap-2 ">
           <FaUsers size={18} color={teamRouter ? "#fff" : "#98A2B3"} />
           <span
             className={`text-xl font-medium hover:text-white ${
@@ -92,7 +92,7 @@ function Navigation({ mobile }: Props) {
           >
             Team
           </span>
-        </Link>
+        </Link> */}
 
         <Link to="/profile" className="flex items-center gap-2 ">
           <FaUser size={18} color={profileRouter ? "#fff" : "#98A2B3"} />

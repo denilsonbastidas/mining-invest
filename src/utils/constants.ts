@@ -41,3 +41,13 @@ export const Machines = [
     generate: 350,
   },
 ];
+
+export const MyDataTab = [
+  {
+    value: 'To collect',
+  },
+
+  {
+    value: 'Finished',
+  },
+];

@@ -35,3 +35,10 @@ input[type="tel"] {
 #content-wrapper {
   height: calc(100vh - 10px);
 }
+
+button,
+input[type='submit'] {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 100%;
+}
